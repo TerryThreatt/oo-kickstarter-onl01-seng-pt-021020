@@ -12,6 +12,7 @@ class Project
   
   def add_backer(backer)
     backers << backer
+    project.add_backer(self) unless project.backers.include?(self)
   end 
   
 end 
